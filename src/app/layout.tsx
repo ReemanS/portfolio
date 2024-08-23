@@ -5,7 +5,7 @@ import "./globals.css";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Reeman Singh's Portfolio",
+  title: "Reeman Singh | Portfolio",
 };
 
 export default function RootLayout({

@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 html {
-  @apply text-text bg-background;
+  @apply text-text bg-background mx-8 md:mx-24 mt-8;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
