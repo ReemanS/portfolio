@@ -1,335 +1,39 @@
-import Image from "next/image";
-import Navbar from "./Navbar";
+"use client";
+
+import Navbar from "@/app/components/Navbar";
+import Main from "@/app/sections/Main";
+import { useEffect } from "react";
 
 export default function Home() {
+  // useEffect(() => {
+  //   const glowEffect = document.getElementById("glow-effect") as HTMLElement;
+
+  //   const handlePointerMove = (event: PointerEvent) => {
+  //     const { clientX, clientY } = event;
+
+  //     glowEffect.animate(
+  //       {
+  //         left: `${clientX}px`,
+  //         top: `${clientY}px`,
+  //       },
+  //       { duration: 3000, fill: "forwards" }
+  //     );
+  //   };
+
+  //   window.addEventListener("pointermove", handlePointerMove);
+
+  //   return () => {
+  //     window.removeEventListener("pointermove", handlePointerMove);
+  //   };
+  // }, []);
   return (
     <>
+      {/* <div id="glow-effect"></div>
+        <div id="blur"></div> */}
+
       <Navbar />
-      <main className="mt-16">
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto
-          fuga earum.
-        </div>
+      <main>
+        <Main />
       </main>
     </>
   );

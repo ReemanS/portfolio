@@ -2,14 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Glowing effect following the pointer (credits to Hyperplexed - https://www.youtube.com/@Hyperplexed)  */
+/* #glow-effect {
+  background-color: white;
+  height: 8vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: #11c1a2;
+  opacity: 0.8;
+  z-index: -21;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -20;
+  backdrop-filter: blur(12vmax);
+} */
+
+/* Rest of the code */
 html {
-  @apply text-text bg-background mx-8 md:mx-24 mt-8;
+  @apply text-text bg-background;
   -ms-overflow-style: auto;
   scrollbar-width: auto;
 }
 
+main {
+  @apply mx-8 md:mx-24;
+}
+
 html::-webkit-scrollbar {
-  display: blocl;
+  display: block;
+}
+
+.text-dynamic {
+  font-size: calc((1.5rem + 4vw) - 0.1vw);
+  @apply 2xl:text-7xl;
 }
 
 @media (min-width: 768px) {
@@ -21,4 +54,16 @@ html::-webkit-scrollbar {
   html::-webkit-scrollbar {
     display: none;
   }
+
+  .text-dynamic {
+    line-height: 4rem;
+  }
+}
+
+.btn-primary {
+  @apply bg-primary text-background p-4 font-bold rounded-lg transition ease-in duration-150 text-base;
+}
+
+.btn-primary:hover {
+  background-color: #00a688;
 }
