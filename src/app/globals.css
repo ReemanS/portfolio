@@ -4,10 +4,21 @@
 
 html {
   @apply text-text bg-background mx-8 md:mx-24 mt-8;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: auto;
+  scrollbar-width: auto;
 }
 
 html::-webkit-scrollbar {
-  display: none;
+  display: blocl;
+}
+
+@media (min-width: 768px) {
+  html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
 }
