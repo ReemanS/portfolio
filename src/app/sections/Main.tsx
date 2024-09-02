@@ -4,7 +4,7 @@ import { HiDocumentDownload } from "react-icons/hi";
 
 export default function Main() {
   return (
-    <section className="h-screen flex justify-center">
+    <section className="h-screen snap-center flex bg-yellow-50 justify-center">
       <div className="pt-12 md:pt-28 text-center">
         <p>Hi there! I am</p>
         <h1 className="text-dynamic font-extrabold text-primary">

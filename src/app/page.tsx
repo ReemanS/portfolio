@@ -2,6 +2,7 @@
 
 import Navbar from "@/app/components/Navbar";
 import Main from "@/app/sections/Main";
+import Projects from "@/app/sections/Projects";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -32,8 +33,9 @@ export default function Home() {
         <div id="blur"></div> */}
 
       <Navbar />
-      <main>
+      <main className="h-screen md:snap-mandatory md:snap-y md:overflow-scroll">
         <Main />
+        <Projects />
       </main>
     </>
   );

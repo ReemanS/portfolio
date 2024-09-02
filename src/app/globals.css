@@ -36,7 +36,8 @@ main {
   @apply mx-8 md:mx-24;
 }
 
-html::-webkit-scrollbar {
+html::-webkit-scrollbar,
+main::-webkit-scrollbar {
   display: block;
 }
 
@@ -46,12 +47,14 @@ html::-webkit-scrollbar {
 }
 
 @media (min-width: 768px) {
-  html {
+  html,
+  main {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
 
-  html::-webkit-scrollbar {
+  html::-webkit-scrollbar,
+  main::-webkit-scrollbar {
     display: none;
   }
 
