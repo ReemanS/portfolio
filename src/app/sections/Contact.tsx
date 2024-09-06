@@ -29,7 +29,7 @@ export default function Contact() {
             <span className="relative group underline">
               reemanl.singh422@gmail.com
               <svg
-                className="absolute -right-8 top-1/3 w-5 h-5 text-background group-hover:text-primary group-active:text-primary transition duration-150"
+                className="absolute -right-8 top-1/2 -translate-y-1/2 w-5 h-5 text-background group-hover:text-primary group-active:text-primary transition duration-150"
                 stroke="currentColor"
                 fill="currentColor"
                 stroke-width="0"

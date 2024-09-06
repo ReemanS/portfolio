@@ -10,7 +10,7 @@ export default function Footer() {
         width={50}
         height={50}
       />
-      <div className="font-semibold mt-6">
+      <div className="font-semibold mt-6 text-xs sm:text-base">
         2024 © Reeman L. Singh • All Rights Reserved
       </div>
     </footer>

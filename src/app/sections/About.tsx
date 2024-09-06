@@ -31,7 +31,7 @@ export default function About() {
               After all, the growth of technology is limitless, and I aim to
               grow my skills and talent alongside it.
             </p>
-            <p className="mb-5">
+            <p className="mb-6">
               These are some of the technologies that I am knowledgeable in:
             </p>
             <div className="mb-4">
