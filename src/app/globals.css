@@ -28,17 +28,10 @@
 /* Rest of the code */
 html {
   @apply text-text bg-background;
-  -ms-overflow-style: auto;
-  scrollbar-width: auto;
 }
 
 main {
   @apply mx-8 md:mx-24;
-}
-
-html::-webkit-scrollbar,
-main::-webkit-scrollbar {
-  display: block;
 }
 
 .text-dynamic {
@@ -47,17 +40,6 @@ main::-webkit-scrollbar {
 }
 
 @media (min-width: 768px) {
-  html,
-  main {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  html::-webkit-scrollbar,
-  main::-webkit-scrollbar {
-    display: none;
-  }
-
   .text-dynamic {
     line-height: 4rem;
   }
@@ -107,4 +89,53 @@ h3 {
 .project-card:active {
   --myColor1: rgba(220, 255, 249, 0.1);
   --myColor2: rgb(200, 253, 244);
+}
+
+/* Name underlines */
+.underline-span-1,
+.underline-span-2 {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-span-1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.15rem;
+  width: 100%;
+  height: 7px;
+  background-color: #ededed;
+}
+
+.underline-span-2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.15rem;
+  width: 100%;
+  height: 7px;
+  background-color: #11c1a2;
+}
+
+/* Technologies */
+.technologies > li {
+  @apply flex flex-col items-center;
+}
+
+.technologies > li:hover .tech-name {
+  @apply text-text;
+}
+
+.technologies > li:hover svg {
+  @apply transform scale-105;
+  transition: transform 0.3s;
+}
+
+.technologies > li > svg {
+  @apply w-14 h-14;
+}
+
+.tech-name {
+  @apply text-xs mt-2 text-slate-500 transition ease-in duration-150;
 }
