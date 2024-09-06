@@ -129,7 +129,7 @@ h3 {
 
 .technologies > li:hover svg {
   @apply transform scale-105;
-  transition: transform 0.3s;
+  transition: transform ease-in 0.2s;
 }
 
 .technologies > li > svg {
@@ -138,4 +138,9 @@ h3 {
 
 .tech-name {
   @apply text-xs mt-2 text-slate-500 transition ease-in duration-150;
+}
+
+/* contact section */
+.contact-links div:hover {
+  @apply text-primary transition duration-150 cursor-pointer;
 }

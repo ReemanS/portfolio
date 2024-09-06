@@ -4,8 +4,8 @@ import Navbar from "@/app/components/Navbar";
 import Main from "@/app/sections/Main";
 import Projects from "@/app/sections/Projects";
 import About from "@/app/sections/About";
-import { useEffect } from "react";
-
+import Contact from "@/app/sections/Contact";
+import Footer from "@/app/components/Footer";
 export default function Home() {
   // useEffect(() => {
   //   const glowEffect = document.getElementById("glow-effect") as HTMLElement;
@@ -38,7 +38,9 @@ export default function Home() {
         <Main />
         <Projects />
         <About />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }
