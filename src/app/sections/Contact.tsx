@@ -1,18 +1,19 @@
 import copy from "copy-to-clipboard";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+import { iconTheme } from "../constants";
 
 export default function Contact() {
   const handleCopy = () => {
     copy("reemanl.singh422@gmail.com");
     toast.success("Email copied to clipboard!", {
       className: "text-text",
-      iconTheme: { primary: "#11C1A2", secondary: "#FBFBFE" },
+      iconTheme: iconTheme,
+      position: "bottom-center",
     });
   };
 
   return (
-    <section className="min-h-screen">
-      <Toaster position="bottom-center" reverseOrder={false} />
+    <section id="contact" className="min-h-screen">
       <div className="pt-28 flex flex-col items-center">
         <h2 className="pt-24">Let's Get in Touch</h2>
         <div className="mt-3 text-left sm:text-center">
@@ -44,13 +45,13 @@ export default function Contact() {
             </span>
           </div>
           <a href="https://www.facebook.com/rem.422">
-            <div className="mb-3">Facebook</div>
+            <div className="mb-3 w-min mx-auto">Facebook</div>
           </a>
           <a href="https://www.linkedin.com/in/reeman-singh/">
-            <div className="mb-3">LinkedIn</div>
+            <div className="mb-3 w-min mx-auto">LinkedIn</div>
           </a>
           <a href="https://github.com/ReemanS">
-            <div className="mb-3">GitHub</div>
+            <div className="mb-3 w-min mx-auto">GitHub</div>
           </a>
         </div>
       </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="min-h-screen h-max">
+    <section id="about" className="min-h-screen h-max">
       <div className="pt-16 md:pt-28">
         <h2 className="text-center sm:text-start">About Me</h2>
         <div className="flex flex-wrap mt-4 justify-between gap-y-4">

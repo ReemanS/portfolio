@@ -4,7 +4,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Projects() {
   return (
-    <section className="min-h-screen h-max">
+    <section id="projects" className="min-h-screen h-max">
       <div className="md:pt-24 text-center">
         <h2>My Featured Projects</h2>
         <div className="pt-4 flex flex-wrap justify-center gap-8">

@@ -6,33 +6,11 @@ import Projects from "@/app/sections/Projects";
 import About from "@/app/sections/About";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/components/Footer";
+import { Toaster } from "react-hot-toast";
 export default function Home() {
-  // useEffect(() => {
-  //   const glowEffect = document.getElementById("glow-effect") as HTMLElement;
-
-  //   const handlePointerMove = (event: PointerEvent) => {
-  //     const { clientX, clientY } = event;
-
-  //     glowEffect.animate(
-  //       {
-  //         left: `${clientX}px`,
-  //         top: `${clientY}px`,
-  //       },
-  //       { duration: 3000, fill: "forwards" }
-  //     );
-  //   };
-
-  //   window.addEventListener("pointermove", handlePointerMove);
-
-  //   return () => {
-  //     window.removeEventListener("pointermove", handlePointerMove);
-  //   };
-  // }, []);
   return (
     <>
-      {/* <div id="glow-effect"></div>
-        <div id="blur"></div> */}
-
+      <Toaster reverseOrder={false} />
       <Navbar />
       <main>
         <Main />
