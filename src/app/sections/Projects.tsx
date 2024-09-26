@@ -45,7 +45,7 @@ export default function Projects() {
                 <p className="pt-0.5">{project.description}</p>
                 <div className="flex text-xs gap-3 py-1.5 text-slate-500 group-hover:text-text group-active:text-text transition duration-200">
                   {project.technologies.map((tech) => (
-                    <div>{tech}</div>
+                    <div key={tech}>{tech}</div>
                   ))}
                 </div>
               </div>

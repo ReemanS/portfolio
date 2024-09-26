@@ -23,7 +23,7 @@ export default function Contact() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Let's Get in Touch
+          Let&apos;s Get in Touch
         </motion.h2>
         <motion.div
           className="mt-3 text-left sm:text-center"
