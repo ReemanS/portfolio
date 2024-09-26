@@ -10,7 +10,7 @@ export default function Footer() {
         width={50}
         height={50}
       />
-      <ul className="flex gap-x-4 mt-4">
+      <ul className="flex gap-x-4 mt-5">
         <li>
           <a href="/" className="hover:underline underline-offset-4">
             Home
