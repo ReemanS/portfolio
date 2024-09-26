@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="relative md:fixed top-0 left-0 right-0 px-8 md:px-24 py-8 bg-transparent z-[1] flex flex-row items-center justify-between bg-gradient-to-b from-white">
       <motion.a
-        href="#main"
+        href="/"
         initial="hidden"
         animate="visible"
         variants={itemVariants}

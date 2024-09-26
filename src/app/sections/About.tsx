@@ -1,21 +1,48 @@
-import aboutImg from "../../assets/images/about.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+  elementVariants,
+  headerVariants,
+  itemVariants,
+  leftScrollingVariants,
+  listVariants,
+} from "../constants";
 
 export default function About() {
   return (
     <section id="about" className="min-h-screen h-max">
       <div className="pt-16 md:pt-28">
-        <h2 className="text-center sm:text-start">About Me</h2>
+        <motion.h2
+          className="text-center sm:text-start"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          About Me
+        </motion.h2>
         <div className="flex flex-wrap mt-4 justify-between gap-y-4">
-          <div className="sm:basis-full md:basis-2/5">
+          <motion.div
+            className="sm:basis-full md:basis-2/5"
+            variants={elementVariants}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ delay: 0.05, duration: 0.5 }}
+          >
             <Image
               src={`/images/about-img.png`}
               alt="Another image of Reeman Singh"
               height={500}
               width={420}
             />
-          </div>
-          <div className="sm:basis-full md:basis-3/5 md:pl-12 text-justify">
+          </motion.div>
+          <motion.div
+            className="sm:basis-full md:basis-3/5 md:pl-12 text-justify"
+            variants={leftScrollingVariants}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
             <h2 className="font-bold mb-7">
               <span className="underline-span-1">Reeman L.</span>{" "}
               <span className="underline-span-2">Singh</span>
@@ -35,8 +62,14 @@ export default function About() {
               These are some of the technologies that I am knowledgeable in:
             </p>
             <div className="mb-4">
-              <ul className="technologies flex flex-wrap gap-4">
-                <li>
+              <motion.ul
+                className="technologies flex flex-wrap gap-4"
+                variants={listVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <motion.li variants={itemVariants}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <path
                       fill="#00c4b3"
@@ -60,8 +93,8 @@ export default function About() {
                     />
                   </svg>
                   <span className="tech-name">Dart</span>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <g fill="#3FB6D3">
                       <path d="M12.3 64.2L76.3 0h39.4L32.1 83.6zM76.3 128h39.4L81.6 93.9l34.1-34.8H76.3L42.2 93.5z" />
@@ -92,8 +125,8 @@ export default function About() {
                     />
                   </svg>
                   <span className="tech-name">Flutter</span>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z" />
                     <path
@@ -103,8 +136,8 @@ export default function About() {
                     />
                   </svg>
                   <span className="tech-name">TypeScript</span>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <path
                       fill="#F0DB4F"
@@ -116,8 +149,8 @@ export default function About() {
                     />
                   </svg>
                   <span className="tech-name">JavaScript</span>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <g fill="#61DAFB">
                       <circle cx="64" cy="64" r="11.4" />
@@ -125,14 +158,14 @@ export default function About() {
                     </g>
                   </svg>
                   <span className="tech-name">React</span>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6h-6.8V41.8h6.8l50.5 75.8C116.4 106.2 128 86.5 128 64c0-35.3-28.7-64-64-64zm22.1 84.6l-7.5-11.3V41.8h7.5v42.8z" />
                   </svg>
                   <span className="tech-name">NextJS</span>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <path
                       d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
@@ -140,8 +173,8 @@ export default function About() {
                     />
                   </svg>
                   <span className="tech-name">TailwindCSS</span>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <linearGradient
                       id="python-original-a"
@@ -199,8 +232,8 @@ export default function About() {
                     />
                   </svg>
                   <span className="tech-name">Python</span>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <path
                       fill="#0074BD"
@@ -224,8 +257,8 @@ export default function About() {
                     />
                   </svg>
                   <span className="tech-name">Java</span>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <path
                       fill="#f58220"
@@ -233,8 +266,8 @@ export default function About() {
                     />
                   </svg>
                   <span className="tech-name">Firebase</span>
-                </li>
-              </ul>
+                </motion.li>
+              </motion.ul>
             </div>
             <p>
               Aside from these, I also have a life! You would find me working
@@ -242,7 +275,7 @@ export default function About() {
               around. This is when I am not watching stuff on YouTube or
               Netflix, or when I am not listening to audiobooks.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

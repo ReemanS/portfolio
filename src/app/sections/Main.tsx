@@ -2,8 +2,13 @@ import Image from "next/image";
 import { AiFillMessage } from "react-icons/ai";
 import { HiDocumentDownload } from "react-icons/hi";
 import toast from "react-hot-toast";
-import { iconTheme } from "../constants";
-import { motion, Variant, Variants } from "framer-motion";
+import {
+  containerVariants,
+  elementVariants,
+  iconTheme,
+  letterVariants,
+} from "../constants";
+import { motion } from "framer-motion";
 
 export default function Main() {
   const handleComingSoon = () => {
@@ -13,26 +18,6 @@ export default function Main() {
       position: "top-center",
       icon: "🚧",
     });
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const letterVariants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const elementVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
   };
 
   const name = "Reeman Singh".split("");

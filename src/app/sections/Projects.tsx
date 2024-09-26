@@ -1,18 +1,33 @@
 import { projects } from "@/app/projects/projects";
 import Image from "next/image";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { motion } from "framer-motion";
+import { itemVariants, headerVariants, listVariants } from "../constants";
 
 export default function Projects() {
   return (
     <section id="projects" className="min-h-screen h-max">
       <div className="md:pt-24 text-center">
-        <h2>My Featured Projects</h2>
-        <div className="pt-4 flex flex-wrap justify-center gap-8">
+        <motion.h2
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          My Featured Projects
+        </motion.h2>
+        <motion.div
+          className="pt-4 flex flex-wrap justify-center gap-8"
+          variants={listVariants}
+          initial="hidden"
+          whileInView="visible"
+        >
           {projects.map((project) => (
-            <a
+            <motion.a
               key={project.name}
               className="project-card p-4 rounded-lg max-w-md group"
               href={project.link}
+              variants={itemVariants}
             >
               <div className="object-contain">
                 <Image
@@ -34,9 +49,9 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

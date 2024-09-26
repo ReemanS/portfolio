@@ -1,6 +1,7 @@
 import copy from "copy-to-clipboard";
 import toast from "react-hot-toast";
-import { iconTheme } from "../constants";
+import { elementVariants, headerVariants, iconTheme } from "../constants";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const handleCopy = () => {
@@ -15,13 +16,35 @@ export default function Contact() {
   return (
     <section id="contact" className="min-h-screen">
       <div className="pt-28 flex flex-col items-center">
-        <h2 className="pt-24">Let's Get in Touch</h2>
-        <div className="mt-3 text-left sm:text-center">
+        <motion.h2
+          className="pt-24"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Let's Get in Touch
+        </motion.h2>
+        <motion.div
+          className="mt-3 text-left sm:text-center"
+          variants={elementVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
           If you are interested in working with me, send me an email or contact
           me through instant message!
-        </div>
+        </motion.div>
 
-        <div className="contact-links text-center text-lg sm:text-2xl">
+        <motion.div
+          className="contact-links text-center text-lg sm:text-2xl"
+          variants={elementVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ delay: 0.55, duration: 0.6 }}
+        >
           <div
             id="email-link"
             className="mt-10 font-semibold mb-4"
@@ -53,7 +76,7 @@ export default function Contact() {
           <a href="https://github.com/ReemanS">
             <div className="mb-3 w-min mx-auto">GitHub</div>
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

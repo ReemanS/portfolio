@@ -163,11 +163,11 @@ h3 {
   height: 2px;
   bottom: -4px;
   left: 0;
-  transform-origin: bottom center;
+  transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
 
 .navbar-items > li:hover::after {
   transform: scaleX(1);
-  transform-origin: bottom center;
+  transform-origin: bottom left;
 }
